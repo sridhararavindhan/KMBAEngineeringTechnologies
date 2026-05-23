@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KMBA Engineering Technologies | Next-Gen CAD/CAE Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="view-controls">
+        <h2><i class="fa-solid fa-microchip"></i>  Viewr Mode</h2>
+        <div class="btn-group">
+            <button class="active" onclick="switchView('desktop')"><i class="fa-solid fa-desktop"></i> Desktop Framework</button>
+            <button onclick="switchView('mobile')"><i class="fa-solid fa-mobile-screen-button"></i> Mobile Layout</button>
+        </div>
+    </div>
+
+    <div class="workspace desktop-mode" id="viewModeContainer">
+        <div class="iframe-container">
+            <div class="site-wrapper">
+
+                <header>
+                    <div class="logo">
+                        <img src="KMBA-1.webp" alt="KMBA Mini Logo" class="mini-logo-img">
+                        <span>KMBA</span>
+                    </div>
+                    <nav id="siteNav">
+                        <a href="#home" class="nav-link active" onclick="navigateTo('home')">Home</a>
+                        <a href="#services" class="nav-link" onclick="navigateTo('services')">Services</a>
+                        <a href="#training" class="nav-link" onclick="navigateTo('training')">Training Matrix</a>
+                        <a href="#contact" class="nav-link" onclick="navigateTo('contact')">Connect Portal</a>
+                    </nav>
+                    <div class="mobile-nav-toggle" onclick="toggleMobileMenu()">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+                </header>
+
+                <div class="mobile-menu-overlay" id="mobileMenu">
+                    <a href="#home" onclick="navigateTo('home'); toggleMobileMenu();">Home</a>
+                    <a href="#services" onclick="navigateTo('services'); toggleMobileMenu();">Services</a>
+                    <a href="#training" onclick="navigateTo('training'); toggleMobileMenu();">Training Matrix</a>
+                    <a href="#contact" onclick="navigateTo('contact'); toggleMobileMenu();">Connect Portal</a>
+                </div>
+
+                <section id="home-sec" class="web-section active-section">
+                    <div class="hero-center-container">
+                        <div class="centered-hologram-logo">
+                            <div class="hologram-outer-ring"></div>
+                            <img src="KMBA-1.webp" alt="KMBA Engineering Technologies Official Logo" class="main-center-logo">
+                        </div>
+                        
+                        <div class="hero-brand-title">
+                            <h1>KMBA ENGINEERING TECHNOLOGIES</h1>
+                            <p class="hero-tagline">JOURNEY TO EXCELLENCE</p>
+                        </div>
+
+                        <div class="hero-split-grid">
+                            <div class="cyber-card text-left">
+                                <div class="badge" style="margin-bottom: 15px;">ESTD 2023 | INDIA</div>
+                                <p>KMBA Engineering Technologies Private Ltd. is a premier engineering design and solutions provider in India. We drive extreme digital innovation across the Automotive, Heavy Industrial Machinery, Aerospace, and Manufacturing sectors.</p>
+                                <div class="badge-row">
+                                    <div class="badge"><i class="fa-solid fa-check"></i> Make in India</div>
+                                    <div class="badge"><i class="fa-solid fa-bolt"></i> Skill in India</div>
+                                </div>
+                            </div>
+                            <div class="cyber-card engineering-blueprint-card">
+                                <img src="Cabintilting02.webp" alt="Automotive Blueprint Matrix" class="blueprint-graphic">
+                                <div class="blueprint-overlay-text">CAD / CAE / R&D CORE</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="services-sec" class="web-section">
+                    <h2 class="section-title">Core Capability Matrix</h2>
+                    <p class="section-subtitle">Advanced high-performance technology services tailored for next-generation systems deployment.</p>
+                    
+                    <div class="grid-3">
+                        <div class="cyber-card">
+                            <div class="icon-box"><i class="fa-solid fa-computer"></i></div>
+                            <h3>Engineering R&D</h3>
+                            <p>Premier CAD/CAE execution architectures. Specialized modeling, detailed structural simulation analysis, product re-engineering, and reverse engineering services.</p>
+                            <div class="tag-list">
+                                <span class="tag">Modeling</span><span class="tag">Analysis</span><span class="tag">CAE</span>
+                            </div>
+                        </div>
+
+                        <div class="cyber-card">
+                            <div class="icon-box"><i class="fa-solid fa-car"></i></div>
+                            <h3>Automotive Systems</h3>
+                            <p>Supporting complex heavy commercial and defense tactical assets. Helping global OEMs engineer platforms for a greener, safer, and highly sustainable ecosystem.</p>
+                            <div class="tag-list">
+                                <span class="tag">MHCV</span><span class="tag">ILCV</span><span class="tag">ARMY Defense</span>
+                            </div>
+                        </div>
+
+                        <div class="cyber-card">
+                            <div class="icon-box"><i class="fa-solid fa-gears"></i></div>
+                            <h3>Industrial Machinery</h3>
+                            <p>Optimizing heavy production machinery assets digitally. We reduce manufacturing friction, compress delivery schedules, and optimize assembly line workflows.</p>
+                            <div class="tag-list">
+                                <span class="tag">Digital Enterprise</span><span class="tag">VAVE</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="training-sec" class="web-section">
+                    <h2 class="section-title">Knowledge Architecture & Training</h2>
+                    <p class="section-subtitle">Bridging the gap between baseline legacy academics and complex corporate production systems.</p>
+                    
+                    <div class="matrix-accordion">
+                        <div class="accordion-node open">
+                            <div class="accordion-trigger">
+                                <span>01 / PRODUCT DESIGN MANAGEMENT</span>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </div>
+                            <div class="accordion-content">
+                                <p>Comprehensive training across execution tracks: Specification target modeling, Automotive BIW structures, Trims, Casting, Forging, Rubber development, and Tool design fixtures.</p>
+                                <div class="tag-list" style="margin-top: 10px;">
+                                    <span class="tag">CATIA V5</span><span class="tag">SOLIDWORKS</span><span class="tag">CREO</span><span class="tag">SOLIDEDGE</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-node">
+                            <div class="accordion-trigger">
+                                <span>02 / PROCESS DESIGN & LIFECYCLE MANAGEMENT</span>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </div>
+                            <div class="accordion-content">
+                                <p>Deep technical instruction on product engineering data models: 4D Documentation frameworks (DFM, DFA, DFS, DFMEA) and 8D root-cause corrective action diagnostics (CAPA).</p>
+                            </div>
+                        </div>
+
+                        <div class="accordion-node">
+                            <div class="accordion-trigger">
+                                <span>03 / INTERNSHIP DEVELOPMENT CORE</span>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </div>
+                            <div class="accordion-content">
+                                <p>1 & 2-Month immersion programs simulating real MNC work environments. Features minor individual assignments and major industrial R&D projects guided by enterprise mentors.</p>
+                                <div class="tag-list" style="margin-top: 10px;">
+                                    <span class="tag">Mechanical R&D</span><span class="tag">Web Development</span><span class="tag">Fullstack Tracks</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="contact-sec" class="web-section">
+                    <h2 class="section-title">Initialize Engagement Portal</h2>
+                    <p class="section-subtitle">Secure connection terminal for corporate clients, vendors, and academic internship registration.</p>
+                    
+                    <div class="contact-split">
+                        <div class="cyber-card">
+                            <h3>Registration Terminal</h3>
+                            <form id="terminalForm" style="margin-top:20px;">
+                                <div class="form-group">
+                                    <label>Identified Name</label>
+                                    <input type="text" placeholder="Enter full signature name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Digital Mail Routing (Email)</label>
+                                    <input type="email" placeholder="name@domain.com" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Comms Link (Contact Number)</label>
+                                    <input type="text" placeholder="+91 XXXXX XXXXX" required>
+                                </div>
+                                <button type="submit" class="cyber-btn">Transmit Request</button>
+                            </form>
+                        </div>
+
+                        <div class="location-terminal-wrapper">
+                            <div class="location-selector-bar">
+                                <button class="loc-tab-btn active" onclick="switchLocation('pune')">Pune HQ</button>
+                                <button class="loc-tab-btn" onclick="switchLocation('salem')">Salem Office</button>
+                            </div>
+
+                            <div class="cyber-card location-panel active-loc" id="loc-pune">
+                                <h4><i class="fa-solid fa-building-flag"></i> Head Office Headquarters</h4>
+                                <p class="address-text">Plot no. 384, sector no. 18, Shivtej Nagar, New Pradhikaran, Chinchwad, Pune – 411019, Maharashtra State.</p>
+                                <p class="comms-line"><i class="fa-solid fa-envelope"></i> Kmbaenggtechnologies@gmail.com</p>
+                                <p class="comms-line"><i class="fa-solid fa-phone"></i> +91 9850253400</p>
+                                <div class="cyber-map-placeholder">
+                                    <div class="radar-line"></div>
+                                    <span><i class="fa-solid fa-location-crosshairs"></i> LAT-LONG GEO-LOCK ACTIVE [PUNE HQ]</span>
+                                </div>
+                            </div>
+
+                            <div class="cyber-card location-panel" id="loc-salem">
+                                <h4><i class="fa-solid fa-registered"></i> Registered Office</h4>
+                                <p class="address-text">2/3, Salethunayakar kadu, Ammepet, Salem - 636003, Tamilnadu State.</p>
+                                <p class="comms-line"><i class="fa-solid fa-envelope"></i> Kmbaenggtechnologies@gmail.com</p>
+                                <p class="comms-line"><i class="fa-solid fa-phone"></i> +91 9860827230</p>
+                                <div class="cyber-map-placeholder">
+                                    <div class="radar-line"></div>
+                                    <span><i class="fa-solid fa-location-crosshairs"></i> LAT-LONG GEO-LOCK ACTIVE [SALEM SITE]</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <footer>
+                    <p>&copy; 2023 KMBA Engineering Technologies Private Limited. All security metrics active. Secure Cloud Connection.</p>
+                </footer>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
